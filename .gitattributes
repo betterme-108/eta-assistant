@@ -1,0 +1,12 @@
+# 跨平台换行符固化：shell 脚本必须 LF（macOS/Linux 可执行），
+# Windows 批处理必须 CRLF（cmd 的 goto/label 对 LF 有兼容坑），其余文本统一 LF
+*.sh      text eol=lf
+*.command text eol=lf
+*.bat     text eol=crlf
+*.py      text eol=lf
+*.js      text eol=lf
+*.css     text eol=lf
+*.html    text eol=lf
+*.md      text eol=lf
+*.yaml    text eol=lf
+*.json    text eol=lf
