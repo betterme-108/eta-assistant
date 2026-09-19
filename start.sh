@@ -69,7 +69,6 @@ if [ -z "$PYTHON" ]; then
     exit 1
   fi
 fi
-echo "[0/4] Python 运行时 ✓（$("$PYTHON" --version)）"
 
 # ---- 1/4 虚拟环境（不存在或不可用则自动重建并安装依赖）----
 # 依赖统一装在项目内独立目录 .venv/（不写系统路径，见文件头说明）
@@ -78,14 +77,18 @@ echo "[0/4] Python 运行时 ✓（$("$PYTHON" --version)）"
 # 等脚本的 shebang 指向本机 .venv 位置），整包拷贝到其他电脑后必然失效。
 # 因此这里做“功能自检”：真跑一次 python 与 pip，跑不通就整个删除重建，
 # 不要试图复用已损坏的 .venv
+# 版本显示：实际运行的是 .venv 里的 Python（自检/启动全走它）；
+# 系统 Python 仅在需要（重）建虚拟环境时才用到，避免版本显示误导
 PIP_ARGS=""
 [ "${PIP_MIRROR:-}" = "1" ] && PIP_ARGS="-i https://pypi.tuna.tsinghua.edu.cn/simple"
 if [ -x ".venv/bin/python" ] \
    && .venv/bin/python -c 'import sys' >/dev/null 2>&1 \
    && .venv/bin/pip --version >/dev/null 2>&1 \
    && [ -x ".venv/bin/uvicorn" ]; then
+  echo "[0/4] Python 运行时 ✓（$(.venv/bin/python --version 2>&1)，项目虚拟环境）"
   echo "[1/4] 虚拟环境 ✓（依赖装在项目内 .venv/，不写入系统路径）"
 else
+  echo "[0/4] Python 运行时 ✓（$($PYTHON --version)，将用于创建虚拟环境）"
   echo "[1/4] 虚拟环境不可用（首次运行 / 已损坏 / 从其他电脑拷贝而来），重建并安装依赖（约 1 分钟）..."
   echo "       依赖安装在项目内独立目录 .venv/（不写入系统路径）"
   rm -rf .venv
