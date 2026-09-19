@@ -1,4 +1,4 @@
-"""英语教学助手 English Teaching Assistant —— FastAPI 入口（v4：批改 + 归因 + 讲评一体化）。
+"""英语教学助手 English Teaching Assistant —— FastAPI 入口（v1.0.0：批改 + 归因 + 讲评一体化）。
 
 分层架构：
   core/       配置中心（.env 双通道）+ 日志系统（终端 + 文件双通道）
@@ -40,7 +40,7 @@ async def lifespan(_: FastAPI):
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title="英语教学助手 English Teaching Assistant", version="4.7",
+        title="英语教学助手 English Teaching Assistant", version=config.APP_VERSION,
         description="初中英语课时作业 / 考试试卷拍照批改 + 错因分析与讲评备课一体化系统（学生零参与）",
         lifespan=lifespan,
     )

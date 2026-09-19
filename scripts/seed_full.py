@@ -514,6 +514,7 @@ def main() -> None:
     # 5) 导出摘要 JSON（仅代号统计，无姓名）
     summary["total_errors"] = total_inserted
     summary["total_students"] = sum(c["students"] for c in summary["classes"].values())
+    os.makedirs(os.path.dirname(json_path) or ".", exist_ok=True)   # 新环境 runtime/seed/ 可能不存在
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
 

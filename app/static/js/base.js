@@ -1,6 +1,6 @@
 "use strict";
 /* 版本自查：打开浏览器控制台（F12）看到 UI-VERSION 即可确认加载的是最新文件 */
-console.log("英语教学助手 UI-VERSION: v4.12-ui-pager-20260919");
+console.log("英语教学助手 UI-VERSION: v1.0.0");
 /* ================= 基础设施 ================= */
 const $ = (sel, root) => (root || document).querySelector(sel);
 const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));

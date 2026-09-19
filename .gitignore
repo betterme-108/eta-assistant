@@ -1,0 +1,21 @@
+# ── 不上传的内部文档 ──
+docs/开发记录.md
+
+# ── Python 运行产物 ──
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ── 虚拟环境 ──
+.venv/
+venv/
+
+# ── 敏感配置（含 API key，绝不提交）──
+.env
+
+# ── 本机运行时产物（数据库 / 日志 / 种子摘要，运行时自动生成）──
+runtime/
+
+# ── 系统文件 ──
+.DS_Store
+Thumbs.db

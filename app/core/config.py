@@ -61,6 +61,9 @@ from typing import Optional
 
 APP_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(APP_DIR)
+
+# 应用版本号（全项目单一来源：API /health、FastAPI 文档、前端 UI-VERSION 均以此为准）
+APP_VERSION = "v1.0.0"
 ONTOLOGY_PATH = os.path.join(PROJECT_ROOT, "data", "error_ontology_en.yaml")
 STATIC_DIR = os.path.join(APP_DIR, "static")
 ENV_FILE = os.path.join(PROJECT_ROOT, ".env")

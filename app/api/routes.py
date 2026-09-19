@@ -41,7 +41,7 @@ def health():
     return {
         "status": "ok",
         "app": "eta-assistant",
-        "version": "4.7",
+        "version": config.APP_VERSION,
         "llm": {
             "model": config.LLM_MODEL,
             "available": config.llm_available(),
