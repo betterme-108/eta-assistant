@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234F46E5'/%3E%3Cstop offset='1' stop-color='%237C3AED'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-size='32' font-weight='700' text-anchor='middle' fill='white' font-family='sans-serif'%3E英%3C/text%3E%3C/svg%3E">
+<title>英语教学助手 · 作业批改 / 错题分析 / 讲评备课</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="topbar-inner">
+    <div class="brand"><span class="logo">英</span>英语教学助手<span class="brand-en">English Teaching Assistant</span></div>
+    <div class="topbar-right">
+      <select id="classPicker" class="class-picker" title="班级筛选（影响全部页面）"></select>
+      <button id="addClassBtn" class="theme-btn no-print" title="新建班级">＋</button>
+      <button id="themeBtn" class="theme-btn no-print" title="深色 / 浅色切换">🌙</button>
+    </div>
+  </div>
+  <nav class="tabs" id="navTabs"></nav>
+  <nav class="subtabs" id="navSub"></nav>
+</header>
+
+<main id="main"><div class="loading-block">加载中…</div></main>
+<div id="toast"></div>
+
+<!-- 零依赖 SPA：脚本按顺序加载（前面文件声明的全局函数/状态供后面文件与内联 onclick 使用），
+     顺序不可调整；修改任一文件后无需其他操作，服务端已统一禁用缓存 -->
+<script src="/static/js/base.js"></script>
+<script src="/static/js/entry.js"></script>
+<script src="/static/js/confirm.js"></script>
+<script src="/static/js/analysis.js"></script>
+<script src="/static/js/lesson.js"></script>
+<script src="/static/js/students.js"></script>
+<script src="/static/js/grading.js"></script>
+<script src="/static/js/router.js"></script>
+</body>
+</html>

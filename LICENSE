@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 betterme-108
+Copyright (c) 2026 英语教学助手 ETA 作者
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+中文说明（非许可证条款，仅为便于同行教师理解）：
+
+本项目为初中英语教师借助生成式人工智能自主开发的教学辅助系统，代码与
+36 类错因本体库可供同行教师自由使用、修改与二次开发（含商用），转载请
+注明出处。作者不对批改结果承担教学责任——系统定位为"AI 辅助、教师主导"，
+一切批改结论与讲评决策以任课教师终审为准。
